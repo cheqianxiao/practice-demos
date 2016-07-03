@@ -1,0 +1,165 @@
+body, ul {
+	padding: 0;
+	margin: 0;
+}
+
+#sidebar {
+	width: 60px;
+	box-sizing: border-box;
+	position: fixed;
+	min-height: 100%;
+	padding-top: 200px;
+	background-color: #fff;
+	border: 1px solid #eef4ed;
+	z-index: 100;
+}
+#sidebar ul li {
+	margin-bottom: 30px;
+}
+#sidebar ul li a {
+	display: block;
+	width: 40px;
+	height: 20px;
+	text-indent: 100px;
+	overflow: hidden;
+	zoom: 1;
+	margin: 0 auto;
+	background: transparent url(img/douban.png) no-repeat ;
+}
+
+#sidebar ul li a#book {
+	background-position: 0 0;
+}
+#sidebar ul li a#film {
+	background-position: -60px 0;
+}
+#sidebar ul li a#music {
+	background-position: -120px 0;
+}
+#sidebar ul li a#group {
+	background-position: -180px 0;
+}
+#sidebar ul li a#city {
+	background-position: -299px 0;
+}
+#closebar {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	bottom: 50px;
+	left: 12px;
+	background: url(img/close.png);
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+.nav-content {
+	width: 200px;
+	position: fixed;
+	opacity: 0;
+	z-index: 99;
+	filter: alpha(opacity=0);
+	min-height: 100%;
+	background-color: #eef4ed;
+	}
+	.nav-con-close {
+		background: url(img/close.png) no-repeat center center;
+		position: absolute;
+		width: 20px;
+		height: 20px;
+         transform: rotate(45deg);
+		top: 0px;
+		right: 0px;
+		cursor: pointer;
+	}
+	.nav-content p {
+		font-family: "Microsoft Yahei";
+		font-size: 14px;
+		color: #666;
+		text-align: center;
+	}
+	
+ .sidebar-move-left {
+	   	-webkit-animation: sml 1s forwards;
+	   }
+	   .closebar-move-right {
+	   		-webkit-animation: cmr 1s forwards;
+	   }
+	   .sidebar-move-right {
+	   	  -webkit-animation: smr 1s forwards;
+	   }
+	   .closebar-move-left {
+	   		-webkit-animation: cml 1s forwards;
+	   }
+       .menuContentEl-move-right {
+       	animation: mmr .5s forwards;
+       }
+       .menuContentEl-move-left {
+       	animation: mml .5s forwards;
+       }
+       .menuContentEl-move-top {
+         animation: mmt .5s forwards;
+       }
+       @keyframes mmt {
+       	from {
+       		opacity: 0;
+       		top: 250px;
+       		left: 60px;
+       	}
+       	to {
+       		opacity: 1;
+       		top: 0;
+       		left: 60px;
+
+       	}
+       }
+       @keyframes mml {
+       	from {
+       		opacity: 1;
+       		transform: translateX(60px);
+       	}
+       	to {
+       		opacity: 0;
+       		transform: translateX(0px);
+       	}
+       }
+       @keyframes mmr {
+       	from {
+       		opacity: 0;
+       	}
+       	to {
+       		opacity: 1;
+       		transform: translateX(60px);
+       	}
+       }
+	   @keyframes sml {
+	   	from{
+	   	}
+	   	to {
+	   		transform: translateX(-120px);
+	   	}
+	   }
+	   @keyframes smr {
+	   	from{
+          transform: translateX(-120px);
+	   	}
+	   	to {
+	   		transform: translateX(0px);
+	   	}
+	   }
+	   @keyframes cmr {
+	   	from{
+           
+	   	}
+	   	to {
+	   		
+	   		transform: translateX(160px) rotate(-180deg);
+	   	}
+	   }
+	   @keyframes cml {
+	   	from{
+           transform: translateX(160px) rotate(180deg);
+	   	}
+	   	to {
+            transform: translateX(0px) rotate(45deg);
+	   	}
+	   }}

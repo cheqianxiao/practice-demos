@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>lightbox</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery-1.11.3.js"></script>
+  <script src="lightbox.js"></script>
+  <script>
+  window.onload = function() {
+    $(function() {
+      var lightbox = new LightBox();
+    })
+  }
+  </script>
+</head>
+
+<body>
+  <div class="thumb-pictures">
+    <h4>Group 1</h4>
+    <div>
+      <img src="img/2.jpg" alt="" class="js-lightbox" data-role="lightbox" data-group="group-1" data-source="img/2.jpg" data-id="kfdsal" data-caption="你好啊">
+      <img src="img/3.jpg" alt="" class="js-lightbox" data-role="lightbox" data-group="group-1" data-source="img/3.jpg" data-id="fkjalskjfls" data-caption="南京">
+      <img src="img/4.jpg" alt="" class="js-lightbox" data-role="lightbox" data-group="group-1" data-source="img/4.jpg" data-id="dfasfdsfsdf" data-caption="上海">
+    </div>
+    <h4>Group 2</h4>
+    
+    <div>
+      <img src="img/1.jpeg" alt="" class="js-lightbox" data-role="lightbox" data-group="group-2" data-source="img/1.jpeg" data-id="dfasfdsfsdf" data-caption="上海">
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+body {
+  color: #0d0d0d;
+  font-family: "Microsoft Yahei";
+  font-size: 12px;
+}
+
+.wrapper {
+  width: 960px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+header h1 {
+  margin: 30px 0;
+  font-size: 32px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.row {
+  overflow: hidden;
+}
+
+.row .grid {
+  float: left;
+  margin-left: 24px;
+}
+
+.grid:first-child {
+  margin-left: 0;
+}
+
+.row .col-8 {
+  width: 632px;
+}
+
+.row .col-4 {
+  width: 304px;
+}
+
+.row .col-2 {
+  width: 140px;
+}
+
+ul.shopping-bag-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  position: relative;
+  border: 1px solid #c8c8c8;
+  margin: 0 0 24px;
+}
+
+li .row {
+  margin: 0 -1px;
+}
+
+img.item-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  left: 1px;
+}
+
+.item-details {
+  padding: 24px 0 38px;
+  min-height: 146px;
+}
+
+.item-product {
+  margin-bottom: 8px;
+}
+
+h3.product-name,
+.product-price {
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.item-edit {
+  overflow: hidden;
+  margin: 0;
+  padding-top: 5px;
+}
+
+.item-edit dt,
+.item-edit dd {
+  margin-bottom: 5px;
+}
+
+.item-edit dt {
+  width: 100px;
+  float: left;
+}
+
+.item-edit dd {
+  width: 190px;
+  float: left;
+  margin-left: 0;
+  font-weight: bold;
+}
+
+.item-edit dd select {
+  width: 50px;
+  height: 20px;
+  position: relative;
+  top: -3px;
+}
+
+.item-meta {
+  position: absolute;
+  bottom: 17px;
+  margin: 0;
+}
+
+.item-meta dt,
+.item-meta dd {
+  display: inline-block;
+  margin: 0;
+}
+
+.item-meta dd {
+  font-weight: bold;
+}
+
+.item-summary {
+  padding: 24px;
+  text-align: right;
+}
+
+.item-summary a.remove:hover {
+  color: #aaa;
+}
+
+.item-summary a.remove {
+  color: #0d0d0d;
+}
+
+.item-summary .itemTotalPrice {
+  position: absolute;
+  bottom: 17px;
+  right: 24px;
+  font-weight: bold;
+}
+
+.cartPage-summary-box {
+  border: 1px solid #c8c8c8;
+}
+
+.cartPage-summary-box .box-heading {
+  margin: 0;
+  padding: 17px 24px 18px 24px;
+  text-align: center;
+  border-bottom: 1px solid #c8c8c8;
+  font-size: 18px;
+  text-transform: uppercase;
+  background-color: #f8f8f8;
+}
+
+.cartPage-summary-box .box-content {
+  padding: 24px 32px;
+  line-height: 20px;
+}
+
+.box-content table {
+  border-collapse: collapse;
+  margin: 0 0 24px;
+}
+
+.box-content table th {
+  width: 167px;
+  font-weight: normal;
+  text-align: left;
+}
+
+.box-content table td {
+  width: 71px;
+  text-align: right;
+}
+
+tbody tr:last-child th,
+tbody tr:last-child td {
+  padding: 0 0 12px;
+}
+
+tfoot tr:first-child th,
+tfoot tr:first-child td {
+  padding: 12px 0 0;
+  border-top: 1px solid #000;
+}
+
+.box-content button {
+  width: 100%;
+  padding: 10px 11px 11px;
+  font-size: 13px;
+  box-sizing: border-box;
+  background-color: #0d0d0d;
+  border: 1px solid #0d0d0d;
+  color: #fff;
+  display: inline-block;
+  cursor: pointer;
+  font-family: "Microsoft Yahei";
+}
+
+.box-content button:hover {
+  background-color: #555;
+}

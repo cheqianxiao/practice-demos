@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>放大镜</title>
+  <style>
+  #demo {
+    width: 300px;
+    height: 200px;
+    margin: 50px;
+    border: 1px solid #aaa;
+    position: relative;
+  }
+  
+  #small-box {
+    position: relative;
+    z-index: 1;
+  }
+  
+  #float-box {
+    display: none;
+    width: 120px;
+    height: 80px;
+    position: absolute;
+    background-color: #ffc;
+    border: 1px solid #aaa;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    cursor: move;
+  }
+  
+  #mask {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    z-index: 10;
+    background-color: #fff;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    cursor: move;
+  }
+  
+  #big-box {
+    display: none;
+    position: absolute;
+    left: 460px;
+    top: 0;
+    width: 480px;
+    height: 320px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    z-index: 1;
+  }
+  
+  #big-box img {
+    position: absolute;
+    z-index: 5;
+  }
+  </style>
+</head>
+
+<body>
+  <div id="demo">
+    <div id="small-box">
+      <div id="mask"></div>
+      <div id="float-box"></div>
+      <img src="small.jpg" alt="">
+    </div>
+    <div id="big-box">
+      <img src="big.jpg" alt="">
+    </div>
+  </div>
+  <script>
+  window.onload = function() {
+    var objMask = document.getElementById("mask");
+    var objDemo = document.getElementById("demo");
+    var objSmallBox = document.getElementById("small-box");
+    var objFloatBox = document.getElementById("float-box");
+    var objBigBox = document.getElementById("big-box");
+    var objBigBoxImage = objBigBox.getElementsByTagName("img")[0];
+    objMask.onmouseover = function() {
+      objFloatBox.style.display = "block";
+      objBigBox.style.display = "block";
+    }
+    objMask.onmouseout = function() {
+      objFloatBox.style.display = "none";
+      objBigBox.style.display = "none";
+    }
+    objMask.onmousemove = function(e) {
+      var e = e || window.event;
+      var left = e.clientX - objDemo.offsetLeft - objMask.offsetLeft - objFloatBox.offsetWidth / 2;
+      if (left < 0) {
+        left = 0;
+      } else if (left > objMask.offsetWidth - objFloatBox.offsetWidth) {
+        left = objMask.offsetWidth - objFloatBox.offsetWidth;
+      }
+      var top = e.clientY - objDemo.offsetTop - objMask.offsetTop - objFloatBox.offsetHeight / 2;
+      if (top < 0) {
+        top = 0;
+      } else if (top > objMask.offsetHeight - objFloatBox.offsetHeight) {
+        top = objMask.offsetHeight - objFloatBox.offsetHeight;
+      }
+
+
+      objFloatBox.style.left = left + "px";
+      objFloatBox.style.top = top + "px";
+
+      var percentageX = objBigBoxImage.offsetWidth / objSmallBox.offsetWidth;
+      var percentageY = objBigBoxImage.offsetHeight / objSmallBox.offsetHeight;
+
+      objBigBoxImage.style.left = -percentageX * left + "px";
+      objBigBoxImage.style.top = -percentageY * top + "px";
+
+    }
+
+  }
+  </script>
+</body>
+
+</html>

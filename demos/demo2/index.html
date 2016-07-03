@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>shoppingBag</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>购物袋</h1>
+    </header>
+    <div class="row">
+      <div class="grid col-8">
+        <ul class="shopping-bag-items">
+          <li>
+            <div class="row">
+              <div class="grid col-2">
+                <a href=""><img src="img/item1.png" alt="" class="item-img"></a>
+              </div>
+              <div class="grid col-4 item-details">
+                <div class="item-product">
+                  <h3 class="product-name">短袖</h3>
+                  <div class="product-price">¥79.90</div>
+                </div>
+                <dl class="item-edit">
+                  <dt>数量：</dt>
+                  <dd>
+                    <select name="" class="quantity_select">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </dd>
+                  <dt>颜色：</dt>
+                  <dd>橄榄绿</dd>
+                  <dt>大小：</dt>
+                  <dd>M（160/68A）</dd>
+                </dl>
+                <dl class="item-meta">
+                  <dt>编号：</dt>
+                  <dd>0395243001</dd>
+                </dl>
+              </div>
+              <div class="grid col-2">
+                <div class="item-summary">
+                  <a href="javascript:;" class="remove" >删除</a>
+                  <div class="itemTotalPrice">小计：<span>¥79.90</span></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="grid col-2">
+                <a href=""><img src="img/item3.png" alt="" class="item-img"></a>
+              </div>
+              <div class="grid col-4 item-details">
+                <div class="item-product">
+                  <h3 class="product-name">短裤</h3>
+                  <div class="product-price">¥129.00</div>
+                </div>
+                <dl class="item-edit">
+                  <dt>数量：</dt>
+                  <dd>
+                    <select name="" class="quantity_select">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </dd>
+                  <dt>颜色：</dt>
+                  <dd>黑</dd>
+                  <dt>大小：</dt>
+                  <dd>M（160/68A）</dd>
+                </dl>
+                <dl class="item-meta">
+                  <dt>编号：</dt>
+                  <dd>0403966002</dd>
+                </dl>
+              </div>
+              <div class="grid col-2">
+                <div class="item-summary">
+                  <a href="javascript:;" class="remove">删除</a>
+                  <div class="itemTotalPrice">小计：<span>¥129.00</span></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="grid col-2">
+                <a href=""><img src="img/item2.png" alt="" class="item-img"></a>
+              </div>
+              <div class="grid col-4 item-details">
+                <div class="item-product">
+                  <h3 class="product-name">长裙</h3>
+                  <div class="product-price">¥99.90</div>
+                </div>
+                <dl class="item-edit">
+                  <dt>数量：</dt>
+                  <dd>
+                    <select name="" class="quantity_select">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </dd>
+                  <dt>颜色：</dt>
+                  <dd>深蓝</dd>
+                  <dt>大小：</dt>
+                  <dd>L（165/88A）</dd>
+                </dl>
+                <dl class="item-meta">
+                  <dt>编号：</dt>
+                  <dd>0202017033</dd>
+                </dl>
+              </div>
+              <div class="grid col-2">
+                <div class="item-summary">
+                  <a href="javascript:;" class="remove">删除</a>
+                  <div class="itemTotalPrice">小计：<span>¥99.90</span></div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="grid col-4">
+        <div class="cartPage-summary-box">
+          <h2 class="box-heading">结算中心</h2>
+          <div class="box-content">
+            <table>
+              <tbody>
+                <tr>
+                  <th>商品总价：</th>
+                  <td id="product_total">¥308.80</td>
+                </tr>
+                <tr>
+                  <th>邮费：</th>
+                  <td>¥10.00</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>共计：</th>
+                  <td id="pay_total">¥318.80</td>
+                </tr>
+              </tfoot>
+            </table>
+            <button>现在结算</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="cart.js"></script>
+</body>
+
+</html>
